@@ -7,12 +7,10 @@ var spotify = new Spotify({
     //id: keys.spotify.id
     secret: keys.secret
 });
-
 var fs = require("fs");
 var axios = require("axios");
 var command = process.argv[2];
 var value = process.argv[3];
-
 
 switch (command) {
 
@@ -109,10 +107,7 @@ function searchSpotify(song) {
         console.log("Song Name: " + spotifyData.name)
         console.log("Album Name: " + spotifyData.album.name)
         console.log("URL: " + spotifyData.album.external_urls.spotify)
-
         }
-      
-     
     });
 }
 
