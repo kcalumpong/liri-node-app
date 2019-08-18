@@ -1,10 +1,10 @@
 # WELCOME TO LIRI! 
 Language Interpretation and Recognition Interface
 
-##WHAT IS LIRI?**
+##WHAT IS LIRI?
 LIRI is a command line application built with Node.js that you can run it in your terminal.
 
-**LIRI can...**
+**LIRI CAN...**
 
 * Search Spotify for any song.
 * Find upcoming concerts by using "Bands in Town".
@@ -29,7 +29,7 @@ node liri.js do-what-it-says
 
 ----------------------------------------------------------------
 
-**Deployed version of the App:**
+**DEPLOYED VERSION OF THE APP:**
 [GitHub] (https://kcalumpong.github.io/liri-node-app/)
 
 Built with Javascript and Node.js
