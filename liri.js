@@ -1,6 +1,8 @@
 require("dotenv").config();
 
-var keys = require("./keys.js").spotify
+var moment = require("moment");
+var omdbKey = require("./keys.js").omdbkey;
+var keys = require("./keys.js").spotify;
 var Spotify = require('node-spotify-api');
 var spotify = new Spotify({
     id: keys.id,
@@ -44,7 +46,7 @@ switch (command) {
 
 function OMDB(movie) {
 
-    var queryURL = "http://www.omdbapi.com/?t=" + movie + "&apikey=" + keys.omdbkey;
+    var queryURL = "http://www.omdbapi.com/?t=" + movie + "&apikey=" + omdbKey;
     console.log(queryURL);
 
     axios.get(queryURL)
@@ -70,23 +72,23 @@ function OMDB(movie) {
 
 function bandsInTown(artists) {
     var queryURL = "https://rest.bandsintown.com/artists/" + artists + "/events?app_id=codingbootcamp";
- 
+    
     axios.get(queryURL)
-
-        .then(function(response) {
-
-            var concerts = response.data;
-            if (concerts.length == 0 || concerts === undefined) {
-                console.log("-------------")
-                console.log("Sorry this artist has not been found or not on tour")
-                console.log("-------------")
-
-            } else {
-                console.log("-------------")
-                console.log("Venue Name: " + concerts[0].venue.name)
-                console.log("Venue Location: " + concerts[0].venue.city)
-                console.log("Date: " + concerts[0].datetime)
-                console.log("-------------")
+    
+    .then(function(response) {
+        var concerts = response.data;
+        
+        if (concerts.length == 0 || concerts === undefined) {
+            console.log("-------------")
+            console.log("Sorry this artist has not been found or not on tour")
+            console.log("-------------")
+            
+        } else {
+            console.log("-------------")
+            console.log("Venue Name: " + concerts[0].venue.name)
+            console.log("Venue Location: " + concerts[0].venue.city)
+            console.log("Date: " + moment(concerts[0].datetime).format('MMMM Do YYYY'))
+            console.log("-------------")
             }
         })
 

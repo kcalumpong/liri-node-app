@@ -34,4 +34,8 @@ node liri.js do-what-it-says
 
 Built with Javascript and Node.js
 
+![Liri Bot Demo](./nodePartOne.gif)
+
+
+
 
