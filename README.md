@@ -34,8 +34,8 @@ node liri.js do-what-it-says
 
 Built with Javascript and Node.js
 
-![Liri Bot Demo](./nodePartOne.gif)
-![Liri Bot Demo](./nodePartTwo.gif)
+![Liri Bot Demo](./liriNode.gif)
+
 
 
 
