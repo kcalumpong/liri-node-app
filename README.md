@@ -1,7 +1,7 @@
 # WELCOME TO LIRI! 
 Language Interpretation and Recognition Interface
 
-##WHAT IS LIRI?
+## WHAT IS LIRI?
 LIRI is a command line application built with Node.js that you can run it in your terminal.
 
 **LIRI CAN...**
